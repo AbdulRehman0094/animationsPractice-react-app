@@ -1,0 +1,92 @@
+@keyframes slideIn {
+  0% {
+    transform: translateX(69vw);
+    font-size: 10px;
+  }
+  100% {
+    font-size: 30px;
+    transform: translateX(0);
+  }
+}
+body {
+  overflow: hidden;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(50%) rotate(90deg);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animationTitle {
+  animation: slideIn 2s ease-in-out;
+  font-size: 30px;
+  position: relative;
+}
+.card {
+  animation: zoom 2s ease-out;
+}
+.circle {
+  animation: rotate 6s linear infinite;
+}
+.card2 {
+  background-color: #94a3b8;
+  height: 300px;
+  width: 300px;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card2:hover {
+  animation: rotateAndScale 2s ease-in-out forwards; /* Apply the keyframes animation on hover */
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.content {
+  font-size: 24px;
+  margin: 50px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  transition: transform 1s ease-out;
+  transform: scale(1); /* Default scale */
+}
+
+/* Zoom in effect */
+.zoomed-in {
+  transform: scale(1.2);
+}
